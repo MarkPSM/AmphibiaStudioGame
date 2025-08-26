@@ -1,0 +1,259 @@
+#root {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+#scoreboard {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: auto;
+}
+
+#scoreboard img {
+  width: 25%;
+  height: 25%;
+  margin-right: 20px;
+}
+
+#scoreboard h3 {
+  margin: 0px;
+}
+
+#frog {
+  padding: 45px 25px;
+  margin-top: 15px;
+  background-color: #000000;
+  border: none;
+  border-radius: 100%;
+
+  transition: all ease 0.25s;
+}
+
+#frog:hover {
+  filter: drop-shadow(0 0 2em #05d667aa);
+  scale: 1.1;
+}
+
+#frog:focus {
+  outline: none;
+  filter: drop-shadow(0 0 2em #05d667aa);
+}
+
+#spider {
+  padding: 45px 25px;
+  margin-top: 15px;
+  background-color: #000000;
+  border: none;
+  border-radius: 100%;
+
+  transition: all ease 0.25s;
+}
+
+#spider:hover {
+  filter: drop-shadow(0 0 2em #a40000);
+  scale: 1.1;
+}
+
+#spider:focus {
+  outline: none;
+  filter: drop-shadow(0 0 2em #a40000);
+}
+
+#wizzard {
+  padding: 35px 25px;
+  margin-top: 15px;
+  background-color: #000000;
+  border: none;
+  border-radius: 100%;
+
+  transition: all ease 0.25s;
+}
+
+#wizzard img {
+  width: 75%;
+  height: 75%;
+}
+
+#wizzard:hover {
+  filter: drop-shadow(0 0 2em #ffcc00);
+  scale: 1.1;
+}
+
+#wizzard:focus {
+  outline: none;
+  filter: drop-shadow(0 0 2em #ffcc00);
+}
+
+#vader {
+  padding: 45px 5px;
+  margin-top: 15px;
+  background-color: #000000;
+  border: none;
+  border-radius: 100%;
+
+  transition: all ease 0.25s;
+}
+
+#vader:hover {
+  filter: drop-shadow(0 0 2em #ffffff);
+  scale: 1.1;
+}
+
+#vader:focus {
+  outline: none;
+  filter: drop-shadow(0 0 2em #ffffff);
+}
+
+#vader img {
+  width: 80%;
+  height: 80%;
+}
+
+@keyframes shrink-grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Adicione esta classe para disparar a animação via JavaScript */
+.animate-shrink-grow {
+  animation: shrink-grow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#upgradeSection {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-items: center;
+}
+
+.upgradeButton {
+  background-color: #222;
+  border-width: 2px;
+  border-bottom: 8px solid #1a1a1a;
+  border-color: #1a1a1a;
+  border-radius: 10px;
+  width: 80%;
+  height: 80%;
+  padding: 15px;
+  margin: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upgradeButton:hover {
+  background-color: #333;
+  border-color: #1a1a1a;
+  scale: 1.1;
+}
+
+.upgradeButton:focus {
+  outline: none;
+  scale: 1.1;
+}
+
+#skinSection {
+  background-color: #1a1a1a;
+  border-radius: 999px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 12px #0003;
+}
+
+.skinBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.skinBox p {
+  margin-top: -5px;
+}
+
+.skinButton {
+  border-width: 2px;
+  border: none;
+  border-radius: 100%;
+
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skinButton img {
+  width: 100%;
+  height: 100%;
+}
+
+.skinButton:focus {
+  outline: none;
+}
+
+.skinButton:hover {
+  outline: none;
+  scale: 1.05;
+}
+
+/* Pop ups */
+#cfi {
+  /* display: none; */
+  position: fixed;
+  top: 34%;
+  left: 1%;
+  width: 100%;
+
+  animation: fadeIn 2s ease infinite;
+}
+
+#bcu {
+  /* display: none; */
+  position: fixed;
+  width: 100%;
+  top: 51%;
+  left: 1%;
+
+  animation: fadeIn 2s ease infinite;
+}
+
+#bns {
+  /* display: none; */
+  position: fixed;
+  top: 70%;
+  left: 1%;
+  width: 100%;
+
+  animation: fadeIn 2s ease infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
